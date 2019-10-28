@@ -14,8 +14,7 @@
 		21031016235F090500D197CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21031015235F090500D197CB /* Assets.xcassets */; };
 		21031019235F090500D197CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21031017235F090500D197CB /* LaunchScreen.storyboard */; };
 		2103101C235F090500D197CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2103101B235F090500D197CB /* main.m */; };
-		21031026235F090500D197CB /* ThreadPortTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21031025235F090500D197CB /* ThreadPortTestTests.m */; };
-		21031031235F090500D197CB /* ThreadPortTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21031030235F090500D197CB /* ThreadPortTestUITests.m */; };
+		21031040235F0ACF00D197CB /* VPortObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2103103F235F0ACF00D197CB /* VPortObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +48,9 @@
 		2103101A235F090500D197CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2103101B235F090500D197CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21031021235F090500D197CB /* ThreadPortTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreadPortTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		21031025235F090500D197CB /* ThreadPortTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadPortTestTests.m; sourceTree = "<group>"; };
-		21031027235F090500D197CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2103102C235F090500D197CB /* ThreadPortTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreadPortTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		21031030235F090500D197CB /* ThreadPortTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadPortTestUITests.m; sourceTree = "<group>"; };
-		21031032235F090500D197CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2103103E235F0ACF00D197CB /* VPortObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPortObject.h; sourceTree = "<group>"; };
+		2103103F235F0ACF00D197CB /* VPortObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPortObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				21031008235F090400D197CB /* ThreadPortTest */,
-				21031024235F090500D197CB /* ThreadPortTestTests */,
-				2103102F235F090500D197CB /* ThreadPortTestUITests */,
 				21031007235F090400D197CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,6 +105,8 @@
 				2103100D235F090400D197CB /* SceneDelegate.m */,
 				2103100F235F090400D197CB /* ViewController.h */,
 				21031010235F090400D197CB /* ViewController.m */,
+				2103103E235F0ACF00D197CB /* VPortObject.h */,
+				2103103F235F0ACF00D197CB /* VPortObject.m */,
 				21031012235F090400D197CB /* Main.storyboard */,
 				21031015235F090500D197CB /* Assets.xcassets */,
 				21031017235F090500D197CB /* LaunchScreen.storyboard */,
@@ -117,24 +114,6 @@
 				2103101B235F090500D197CB /* main.m */,
 			);
 			path = ThreadPortTest;
-			sourceTree = "<group>";
-		};
-		21031024235F090500D197CB /* ThreadPortTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				21031025235F090500D197CB /* ThreadPortTestTests.m */,
-				21031027235F090500D197CB /* Info.plist */,
-			);
-			path = ThreadPortTestTests;
-			sourceTree = "<group>";
-		};
-		2103102F235F090500D197CB /* ThreadPortTestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				21031030235F090500D197CB /* ThreadPortTestUITests.m */,
-				21031032235F090500D197CB /* Info.plist */,
-			);
-			path = ThreadPortTestUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +250,7 @@
 				2103100B235F090400D197CB /* AppDelegate.m in Sources */,
 				2103101C235F090500D197CB /* main.m in Sources */,
 				2103100E235F090400D197CB /* SceneDelegate.m in Sources */,
+				21031040235F0ACF00D197CB /* VPortObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +258,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21031026235F090500D197CB /* ThreadPortTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21031031235F090500D197CB /* ThreadPortTestUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
