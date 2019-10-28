@@ -64,11 +64,11 @@
     NSLog(@"person:handlePortMessage  == %@",[NSThread currentThread]);
 
     NSLog(@"从VC 传过来一些信息:");
-//    NSArray *messageArr = [message valueForKey:@"components"];
-//    NSString *dataStr   = [[NSString alloc] initWithData:messageArr.firstObject  encoding:NSUTF8StringEncoding];
-//    NSLog(@"components == %@ --%@",[message valueForKey:@"components"], dataStr);
-//    NSLog(@"receivePort == %@",[message valueForKey:@"receivePort"]);
-//    NSLog(@"sendPort == %@",[message valueForKey:@"sendPort"]);
-//    NSLog(@"msgid == %@",[message valueForKey:@"msgid"]);
+    NSArray *messageArr = [message valueForKey:@"components"];
+    NSString *dataStr   = [[NSString alloc] initWithData:messageArr.firstObject  encoding:NSUTF8StringEncoding];
+    NSLog(@"components == %@ --%@",[message valueForKey:@"components"], dataStr);
+    NSLog(@"receivePort == %@",[message valueForKey:@"receivePort"]);
+    NSLog(@"sendPort == %@",[message valueForKey:@"sendPort"]);
+    NSLog(@"msgid == %@",[message valueForKey:@"msgid"]);
 }
 @end

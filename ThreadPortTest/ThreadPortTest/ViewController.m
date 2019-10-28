@@ -47,41 +47,40 @@
     NSLog(@"VC == %@",[NSThread currentThread]);
 
     NSLog(@"从VPortObject 传过来一些信息:");
-//    message.components;
-//    NSLog(@"localPort == %@",[message valueForKey:@"localPort"]);
-//    NSLog(@"remotePort == %@",[message valueForKey:@"remotePort"]);
-//    NSLog(@"receivePort == %@",[message valueForKey:@"receivePort"]);
-//    NSLog(@"sendPort == %@",[message valueForKey:@"sendPort"]);
-//    NSLog(@"msgid == %@",[message valueForKey:@"msgid"]);
-//    NSLog(@"components == %@",[message valueForKey:@"components"]);
+    NSLog(@"localPort == %@",[message valueForKey:@"localPort"]);
+    NSLog(@"remotePort == %@",[message valueForKey:@"remotePort"]);
+    NSLog(@"receivePort == %@",[message valueForKey:@"receivePort"]);
+    NSLog(@"sendPort == %@",[message valueForKey:@"sendPort"]);
+    NSLog(@"msgid == %@",[message valueForKey:@"msgid"]);
+    NSLog(@"components == %@",[message valueForKey:@"components"]);
     //会报错,没有这个隐藏属性
     //NSLog(@"from == %@",[message valueForKey:@"from"]);
 
-//    NSArray *messageArr = [message valueForKey:@"components"];
-//    NSString *dataStr   = [[NSString alloc] initWithData:messageArr.firstObject  encoding:NSUTF8StringEncoding];
-//    NSLog(@"传过来一些信息 :%@",dataStr);
-//    NSPort  *destinPort = [message valueForKey:@"remotePort"];
-//
-//    if(!destinPort || ![destinPort isKindOfClass:[NSPort class]]){
-//        NSLog(@"传过来的数据有误");
-//        return;
-//    }
-//
-//    NSData *data = [@"VC收到!!!" dataUsingEncoding:NSUTF8StringEncoding];
-//
-//    NSMutableArray *array  =[[NSMutableArray alloc]initWithArray:@[data,self.myPort]];
-//
-//    // 非常重要,如果你想在Person的port接受信息,必须加入到当前主线程的runloop
-//    [[NSRunLoop currentRunLoop] addPort:destinPort forMode:NSDefaultRunLoopMode];
-//
-//    NSLog(@"VC == %@",[NSThread currentThread]);
-//
-//    BOOL success = [destinPort sendBeforeDate:[NSDate date]
-//                                        msgid:10010
-//                                   components:array
-//                                         from:self.myPort
-//                                     reserved:0];
-//    NSLog(@"%d",success);
+    NSArray *messageArr = [message valueForKey:@"components"];
+    NSString *dataStr   = [[NSString alloc] initWithData:messageArr.firstObject  encoding:NSUTF8StringEncoding];
+    NSLog(@"传过来一些信息 :%@",dataStr);
+    NSPort  *destinPort = [message valueForKey:@"remotePort"];
+
+    if(!destinPort || ![destinPort isKindOfClass:[NSPort class]]){
+        NSLog(@"传过来的数据有误");
+        return;
+    }
+
+    NSData *data = [@"VC收到!!!" dataUsingEncoding:NSUTF8StringEncoding];
+
+    NSMutableArray *array  =[[NSMutableArray alloc]initWithArray:@[data,self.myPort]];
+
+    // 非常重要,如果你想在Person的port接受信息,必须加入到当前主线程的runloop
+    [[NSRunLoop currentRunLoop] addPort:destinPort forMode:NSDefaultRunLoopMode];
+
+    NSLog(@"VC == %@",[NSThread currentThread]);
+
+    BOOL success = [destinPort sendBeforeDate:[NSDate date]
+                                        msgid:10010
+                                   components:array
+                                         from:self.myPort
+                                     reserved:0];
+    NSLog(@"%d",success);
 
 }
 
